@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Batalha Naval - Cadastro do Jogador</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container tela-cadastro">
+
+    <h1>Batalha Naval</h1>
+    <p class="subtitulo">Preencha seus dados antes de zarpar</p>
+
+    <!-- Formulário de cadastro do jogador -->
+    <form id="form-cadastro">
+
+      <label for="nome">Nome do jogador:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+      <label for="nivel">Nível de dificuldade:</label>
+      <select id="nivel" name="nivel">
+        <option value="">Selecione um nível</option>
+        <option value="facil">Fácil (tabuleiro 8x8 - 5 vidas)</option>
+        <option value="medio">Médio (tabuleiro 10x10 - 4 vidas)</option>
+        <option value="dificil">Difícil (tabuleiro 12x12 - 3 vidas)</option>
+      </select>
+
+      <label for="corNavio">Cor da sua frota:</label>
+      <input type="color" id="corNavio" name="corNavio" value="#2f6690">
+
+      <!-- Aqui será exibida qualquer mensagem de erro da validação -->
+      <p id="mensagem-erro" class="mensagem-erro"></p>
+
+      <button type="submit">Iniciar partida</button>
+
+    </form>
+
+  </div>
+
+  <script src="js/cadastro.js"></script>
+</body>
+</html>

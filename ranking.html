@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Batalha Naval - Ranking</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container tela-ranking">
+
+    <h1>Ranking de Almirantes</h1>
+    <p class="subtitulo">As maiores pontuações já registradas</p>
+
+    <!-- A lista de ranking é montada dinamicamente pelo JavaScript -->
+    <ol id="lista-ranking" class="lista-ranking"></ol>
+
+    <p id="ranking-vazio" class="ranking-vazio escondido">
+      Ainda não há pontuações registradas. Jogue uma partida!
+    </p>
+
+    <button id="btn-novo-jogo">Jogar novamente</button>
+
+  </div>
+
+  <script src="js/ranking.js"></script>
+</body>
+</html>

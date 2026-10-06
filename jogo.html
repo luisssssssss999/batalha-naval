@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Batalha Naval - Partida</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container tela-jogo">
+
+    <header class="cabecalho-jogo">
+      <div>
+        <p>Jogador: <strong id="info-nome">-</strong></p>
+        <p>Nível: <strong id="info-nivel">-</strong></p>
+      </div>
+      <div class="placar">
+        <p>Pontos: <strong id="info-pontos">0</strong></p>
+        <p>Vidas: <strong id="info-vidas">0</strong></p>
+      </div>
+    </header>
+
+    <h1>Ataque ao tabuleiro inimigo</h1>
+
+    <!-- O tabuleiro é criado dinamicamente pelo JavaScript -->
+    <div id="tabuleiro" class="tabuleiro"></div>
+
+    <!-- Mensagem de fim de jogo -->
+    <div id="fim-de-jogo" class="fim-de-jogo escondido">
+      <h2 id="titulo-fim"></h2>
+      <p id="texto-fim"></p>
+      <button id="btn-ranking">Ver ranking</button>
+      <button id="btn-jogar-novamente">Jogar novamente</button>
+    </div>
+
+  </div>
+
+  <script src="js/jogo.js"></script>
+</body>
+</html>

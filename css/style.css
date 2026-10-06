@@ -1,0 +1,224 @@
+/* ===========================================================
+   Batalha Naval - Estilos gerais
+   Paleta: tons de mar profundo + destaque em areia/dourado
+   =========================================================== */
+
+:root {
+  --azul-profundo: #0b2545;
+  --azul-medio: #13315c;
+  --azul-claro: #1b98a0;
+  --espuma: #eaf4f4;
+  --areia: #f2c57c;
+  --vermelho-alerta: #c1444d;
+  --verde-acerto: #4caf7d;
+  --raio-borda: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--azul-profundo) 0%, var(--azul-medio) 100%);
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--espuma);
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 640px;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.subtitulo {
+  color: var(--areia);
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+/* ---------- Tela de cadastro ---------- */
+
+.tela-cadastro {
+  text-align: center;
+}
+
+#form-cadastro {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--raio-borda);
+  padding: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#form-cadastro label {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--espuma);
+}
+
+#form-cadastro input[type="text"],
+#form-cadastro select {
+  padding: 10px;
+  border-radius: var(--raio-borda);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--espuma);
+  color: var(--azul-profundo);
+  font-size: 15px;
+}
+
+#form-cadastro input[type="color"] {
+  width: 60px;
+  height: 36px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: var(--raio-borda);
+  background: var(--azul-claro);
+  color: var(--azul-profundo);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+button:hover {
+  background: var(--areia);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.mensagem-erro {
+  color: var(--vermelho-alerta);
+  font-weight: bold;
+  min-height: 20px;
+  margin: 8px 0 0;
+}
+
+/* ---------- Tela do jogo ---------- */
+
+.cabecalho-jogo {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--raio-borda);
+  padding: 12px 18px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.cabecalho-jogo p {
+  margin: 4px 0;
+}
+
+.placar {
+  text-align: right;
+}
+
+.tabuleiro {
+  display: grid;
+  gap: 4px;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.celula {
+  aspect-ratio: 1 / 1;
+  background: var(--azul-claro);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  user-select: none;
+  transition: background 0.15s ease;
+}
+
+.celula:hover {
+  filter: brightness(1.15);
+}
+
+.celula.agua-revelada {
+  background: var(--azul-medio);
+  cursor: default;
+}
+
+.celula.navio-acertado {
+  background: var(--areia);
+  color: var(--azul-profundo);
+  cursor: default;
+  font-weight: bold;
+}
+
+.fim-de-jogo {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--raio-borda);
+  padding: 20px;
+}
+
+.fim-de-jogo button {
+  margin: 8px 6px 0;
+  width: auto;
+  padding: 10px 18px;
+}
+
+.escondido {
+  display: none;
+}
+
+/* ---------- Tela de ranking ---------- */
+
+.tela-ranking {
+  text-align: center;
+}
+
+.lista-ranking {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--raio-borda);
+  padding: 16px 16px 16px 40px;
+  margin-bottom: 20px;
+}
+
+.lista-ranking li {
+  padding: 8px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.lista-ranking li:last-child {
+  border-bottom: none;
+}
+
+.ranking-vazio {
+  color: var(--areia);
+}
